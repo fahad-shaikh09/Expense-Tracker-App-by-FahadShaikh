@@ -34,7 +34,7 @@ const AddExpense = () => {
        <label>Enter Amount</label> <br />
         <input type="number"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
+                onChange={(e) => e.target.value < 0 ? setAmount(e.target.value) : alert("Enter -ve amount for Expense")}
                 placeholder="Enter Amount"
                 required
         />
